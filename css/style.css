@@ -1,0 +1,380 @@
+/*Styling to my map page*/
+
+/*******************************DOM Tags***************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Averia Libre", calibri;
+    background-color: gray;
+}
+
+body {
+    font-weight: 300;
+    background-color: white;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+    margin: 0;
+    padding-top: 20px;
+    color: white;
+}
+
+h3, h4 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header {
+    height: 75px;
+    background-color: #204d74;
+    display: block;
+}
+
+input, select {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+li {
+    padding: 2px 0 3px 0;
+}
+
+span {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li:hover {
+    color: yellow;
+}
+
+/*********************************DOM Elements*********************************/
+
+#authorDetails {
+    padding: 4px 0 0 0;
+    background-color: white;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+}
+
+#idBtnFun {
+    width: 100%;
+    height: 50px;
+}
+
+#idCat {
+    color: grey;
+}
+
+#idDivContainerPlaces {
+    width: 100%;
+    background-color: grey;
+    color: white;
+}
+
+#idDivErrorMsg {
+    background-color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+#idDivListPlaces {
+    padding: 2px 0 0 10px;
+    text-align: left;
+    font-size: 16px;
+    background-color: #204d74;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    overflow: scroll;    
+    height: 280px;
+}
+
+#idFilter {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+
+#idYourAddress, #idYourTitle, #idYourCategory, #idBtnYourAddress {
+    border: 5px #222 solid;
+    height: 35px;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+
+#map {
+    background-color: #E9E5DC;
+    float: left;
+    width: 100%;
+}
+
+#pano {
+    width: 300px;
+    height: 300px;
+}
+
+#wikilinksHeading {
+    text-align: center;
+}
+
+#wikipedialinks {
+    padding: 2px 0 0 10px;
+    text-align: left;
+    font-size: 16px;
+    background-color: #204d74;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    overflow: scroll;
+    height: 150px;
+}
+
+/********************************Classes***************************************/
+
+.col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-2, .col-md-1, .col-sm-12, .col-xs-12, .row {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.container {
+    border: #1b6d85 thin solid;
+    margin: auto;
+    padding: 0;
+    border: 0;    
+}
+
+.head-prom-places {
+    height: 30px;
+    margin: 0;
+    padding: 2px 0 0 0;
+    border: 0;
+    width: 100%;
+    background-color: darkgrey;
+    color: black;
+    text-align: center;
+}
+
+.heading {
+    text-align: center;
+}
+
+.map-class {
+    min-height: 585px;
+    max-height: 800px;
+}
+
+.marker-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.marker-msg {
+    text-align: center;
+}
+
+.my-button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-align: center;
+    background-color: #204d74;
+    color: white;
+    cursor: pointer;
+}
+
+.my-button:hover {
+    background-color: #ccc;
+    color: #204d74;
+}
+
+.sub-heading {
+    height: 20px;
+    color: peachpuff;
+    font-family: "Lucida Handwriting", calibri;
+    text-align: right;
+}
+
+.wiki-href:hover {
+    color: yellow;
+}
+
+.wiki-links {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 150px;
+    background-color: darkgrey;
+    color: black;
+}
+
+.display-none {
+    display: none;
+}
+
+.input-label {
+    font-size: 16px;
+    color: #1b6d85;
+    widtth: 100%;
+    padding: 3px 0px 3px 3px;
+    float: left;
+}
+
+input[type=text], input[type=password], textarea {
+    -webkit-transition: all 0.20s ease-in-out;
+    -moz-transition: all 0.20s ease-in-out;
+    -ms-transition: all 0.20s ease-in-out;
+    -o-transition: all 0.20s ease-in-out;
+    border-radius: 4px;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+    width: 100%;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(161, 208, 244, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(161, 208, 244, 1);
+}
+
+/*Master Background divs*/
+#bg-div
+{
+    background-color: gray;
+    margin:0 auto;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-family: calibri;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    cursor:default;
+    overflow:hidden;
+}
+
+#main-div
+{
+    max-width: 1000px;
+    background: #ffffff;
+    margin:0 auto;
+    border: 1px #222 solid;
+
+}
+
+.row-box {
+    border: #1b6d85 ridge thin;
+    border-radius: 4px;
+    margin: 2px;
+    padding: 2px;
+}
+
+/* Buttons */
+
+.spl-button {
+    display: inline-block;
+    border-radius: 5px;
+    background: #57AA19;
+    background: -webkit-gradient(linear, left top, left bottom, from(#8BBEE5), to(#2185D1));
+    background: -moz-linear-gradient(top, #8BBEE5, #2185D1);
+
+    border: none;
+    color: #ffffff;
+    font-weight:lighter;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    width: 60px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;  
+}
+.spl_button:hover
+{
+    background: -webkit-gradient(linear, left top, left bottom, from(#2185D1), to(#8BBEE5));
+    background: -moz-linear-gradient(top, #2185D1, #8BBEE5);
+    color: #ffffff;
+}
+
+.button span:after {
+    content: '�';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.disabledButton{
+    display: inline-block;
+    border-radius: 5px;
+    border: none;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    width: 60px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    cursor: not-allowed;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
