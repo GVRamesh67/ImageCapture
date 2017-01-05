@@ -40,7 +40,6 @@ var ViewModal = function () {
         } else {
             message('Wrong Authentication!');
             messageVisible(true);
-            alert('2' + message());
         }
         divUserAuthenticated(koVisitorCredentials().divUserAuthenticated);
         if (firstCall) {
