@@ -6,7 +6,7 @@ var ViewModal = function () {
     self = this;
     //Initializing all the KO Variables (The ones that are bound to DOM
     //Elements)    
-    divWhereVisit = ko.observable('P');
+    divWhereVisit = ko.observable('A');
     errorMessage = ko.observable('');
     self.plantDivVisible = function () {
         return (checkDivVisible('P'));
