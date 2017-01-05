@@ -21,22 +21,23 @@
                 </header>
                 <main>
                     <form id = "FRM_TOVPS_OFFICIAL_VISIT_PASS">
-                        <div class="row row-box" data-bind="with: koVisitorCredentials">
+                        <!--div class="row row-box" data-bind="with: koVisitorCredentials"-->
+                        <div class="row row-box">
                             <h3>User Authentication</h3>
                             <div class="col-md-2 col-sm-6 col-xs-12">
                                 <span class="input-label">Phone No:</span>
                             </div>
                             <div class="col-md-4 col-sm-6 col-xs-12">
-                                <input type="text"  name="NM_VISITOR_PHONE_NO" id="ID_VISITOR_PHONE_NO" data-bind="value: $data.visitorPhoneNo">
+                                <input type="text"  name="NM_VISITOR_PHONE_NO" id="ID_VISITOR_PHONE_NO" data-bind="value: koVisitorCredentials().visitorPhoneNo">
                             </div>
                             <div class="col-md-2 col-sm-6 col-xs-12">
                                 <span class="input-label">OTP:</span>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
-                                <input type="text"  name="NM_OTP" id="ID_OTP" data-bind="value: $data.visitorEnteredOTP">
+                                <input type="text"  name="NM_OTP" id="ID_OTP" data-bind="value: koVisitorCredentials().visitorEnteredOTP">
                             </div>
                             <div class="col-md-1 col-sm-12 col-xs-12">
-                                <input type=button value="Click"  class="float-left spl-button" data-bind="click: $data.authenticate()">
+                                <input type=button value="Click"  class="float-left spl-button" data-bind="click: processAuthenticate()">
                             </div>
                         </div>
                         <div class="row-box" data-bind="visible: divUserAuthenticated">
@@ -113,11 +114,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row-box" data-bind="visible: divUserAuthenticated">
+                        <div class="row-box" data-bind="visible: messageVisible">
                             <h3>Message</h3>
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <span class="input-label" data-bind="text: errorMessage"></span>
+                                    <span class="input-label" data-bind="text: message"></span>
                                 </div>
                             </div>
                         </div>
@@ -137,12 +138,10 @@
                         <div class="display-none">
                             <table>                        
                                 <tr><td>Passno: </td><td><input type="text"  name="NM_PASSNO" id="ID_PASSNO"  style="width: 200px;" ></td></tr>
-
                                 <tr><td>Desig Desc: </td><td><input type="text"  name="NM_DESIG_DESC" id="ID_DESIG_DESC"  style="width: 200px;" ></td></tr>
                                 <tr><td>Dept Cd: </td><td><input type="text"  name="NM_DEPT_CD" id="ID_DEPT_CD"  style="width: 200px;" ></td></tr>
                                 <tr><td>Dept Desc: </td><td><input type="text"  name="NM_DEPT_DESC" id="ID_DEPT_DESC"  style="width: 200px;" ></td></tr>
-                                <tr><td>Pass Dt: </td><td><input type="text"  name="NM_PASS_DT" id="ID_PASS_DT"  style="width: 200px;" ></td></tr>
-                                <tr><td>Message: </td><td><span id="id_msg"></span></td> </tr>
+                                <tr><td>Pass Dt: </td><td><input type="text"  name="NM_PASS_DT" id="ID_PASS_DT"  style="width: 200px;" ></td></tr>                                
                             </table>
                         </div>
                     </form>
@@ -152,3 +151,4 @@
         <script src="js/Tovpsofficialvisitpass.js"></script>
     </body>
 </html>
+
