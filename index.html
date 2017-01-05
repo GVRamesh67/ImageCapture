@@ -9,7 +9,7 @@
         <link href="bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <script src="bootstrap/bootstrap.min.js"></script>
-        <script src="js/Tovpsofficialvisitpass.js"></script>
+        <script src="ko/knockout-3.4.1.js"></script>
     </head>
     <body>
         <div id="bg-div" class="container">
@@ -21,22 +21,37 @@
                 </header>
                 <main>
                     <form id = "FRM_TOVPS_OFFICIAL_VISIT_PASS">
+                        <div class="row row-box">
+                            <h3>User Authentication</h3>
+                            <div class="col-md-2 col-sm-6 col-xs-12">
+                                <span class="input-label">Phone No:</span>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <input type="text"  name="NM_VISITOR_PHONE_NO" id="ID_VISITOR_PHONE_NO">
+                            </div>
+                            <div class="col-md-2 col-sm-6 col-xs-12">
+                                <span class="input-label">OTP:</span>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <input type="text"  name="NM_OTP" id="ID_OTP">
+                            </div>
+                        </div>
                         <div class="row-box">
                             <div class="row">
                                 <h3>Where to visit?</h3>
                                 <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <input type="radio" name="NM_WHERE_VISIT" id="ID_WHERE_VISIT" value="Plant"><label for="Plant">Plant</label>
+                                    <input type="radio" name="NM_WHERE_VISIT" id="ID_WHERE_VISIT_P" value="P" data-bind="checked: divWhereVisit"><label for="Plant">Plant</label>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <input type="radio" name="NM_WHERE_VISIT" id="ID_WHERE_VISIT" value="Admin"><label for="Admin">Admin</label>
+                                    <input type="radio" name="NM_WHERE_VISIT" id="ID_WHERE_VISIT_A" value="A" data-bind="checked: divWhereVisit"><label for="Admin">Admin</label>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <input type="radio" name="NM_WHERE_VISIT" id="ID_WHERE_VISIT" value="Both"><label for="Both">Both</label>
+                                    <input type="radio" name="NM_WHERE_VISIT" id="ID_WHERE_VISIT_B" value="B" data-bind="checked: divWhereVisit"><label for="Both">Both</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <h3>Whom to visit?</h3>
-                                <div class="row row-box">
+                                <div id="idPlant" class="row row-box" data-bind="visible: plantDivVisible()">
                                     <h4>Plant</h4>
                                     <div class="col-md-2 col-sm-12 col-xs-12"><span class="input-label">Emp. No.</span></div>
                                     <div class="col-md-4 col-sm-12 col-xs-12"><input type="text"  name="NM_EMPNO" id="ID_EMPNO" ></div>
@@ -44,7 +59,7 @@
                                     <div class="col-md-4 col-sm-12 col-xs-12"><input type="text"  name="NM_EMP_CELL_NO" id="ID_EMP_CELL_NO"></div>
                                     <div class="col-md-12 col-sm-12 col-xs-12"><span class="input-label">Employee Name, Designation, etc. will be dipslayed here</span></div>
                                 </div>
-                                <div class="row row-box">
+                                <div id="idAdmin" class="row row-box" data-bind="visible: adminDivVisible()">
                                     <h4>Administration Building</h4>
                                     <div class="col-md-2 col-sm-12 col-xs-12"><span class="input-label">Emp. No.</span></div>
                                     <div class="col-md-4 col-sm-12 col-xs-12"><input type="text"  name="NM_EMPNO2" id="ID_EMPNO2" ></div>
@@ -127,5 +142,6 @@
                 </main>
             </div>
         </div>
+        <script src="js/Tovpsofficialvisitpass.js"></script>
     </body>
 </html>
